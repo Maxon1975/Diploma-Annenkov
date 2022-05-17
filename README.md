@@ -4,7 +4,7 @@
 ## Документация
 
 - [План](https://github.com/Maxon1975/Diploma-Annenkov/blob/master/documents/Plan.md)
-- [Отчет по результатам тестирования](https://github.com/Maxon1975/Diploma-Annenkov-Maksim/blob/master/documents/Report.md)
+- [Отчет по результатам тестирования](https://github.com/Maxon1975/Diploma-Annenkov/blob/master/documents/Peport.md)
 - [Отчет по итогам автоматизации](https://github.com/Maxon1975/Diploma-Annenkov-Maksim/blob/master/documents/Summary.md)
 
 ## Запуск приложения и тестов
