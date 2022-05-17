@@ -7,13 +7,13 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import ru.netology.data.ConnectionManager;
+import ru.netology.data.DBHelper;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static ru.netology.data.APIManager.fillForm;
-import static ru.netology.data.ConnectionManager.getCreditId;
-import static ru.netology.data.ConnectionManager.getPaymentId;
+import static ru.netology.data.DBHelper.getCreditId;
+import static ru.netology.data.DBHelper.getPaymentId;
 import static ru.netology.data.DataManager.*;
 
 public class APITest {
@@ -35,7 +35,7 @@ public class APITest {
 
     @AfterEach
     void clean() {
-        ConnectionManager.cleanDb();
+        DBHelper.cleanDb();
     }
 
     @Test

@@ -5,7 +5,7 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import lombok.val;
 import org.junit.jupiter.api.*;
-import ru.netology.data.ConnectionManager;
+import ru.netology.data.DBHelper;
 import ru.netology.pages.CreditPayPage;
 import ru.netology.pages.LeadingPage;
 import ru.netology.pages.PaymentPage;
@@ -13,7 +13,7 @@ import ru.netology.pages.PaymentPage;
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static ru.netology.data.ConnectionManager.*;
+import static ru.netology.data.DBHelper.*;
 import static ru.netology.data.DataManager.getValidApprovedCard;
 import static ru.netology.data.DataManager.getValidDeclinedCard;
 
@@ -30,7 +30,7 @@ public class SuccessfulTest {
 
     @AfterAll
     static void tearDown() {
-        ConnectionManager.cleanDb();
+        DBHelper.cleanDb();
         SelenideLogger.removeListener("AllureSelenide");
     }
 
@@ -41,7 +41,7 @@ public class SuccessfulTest {
 
     @AfterEach
     void cleanDb() {
-        ConnectionManager.cleanDb();
+        DBHelper.cleanDb();
     }
 
     @Nested

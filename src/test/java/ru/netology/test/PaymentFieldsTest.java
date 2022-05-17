@@ -5,7 +5,7 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import lombok.val;
 import org.junit.jupiter.api.*;
-import ru.netology.data.ConnectionManager;
+import ru.netology.data.DBHelper;
 import ru.netology.pages.CreditPayPage;
 import ru.netology.pages.LeadingPage;
 import ru.netology.pages.PaymentPage;
@@ -32,7 +32,7 @@ public class PaymentFieldsTest {
 
     @AfterAll
     static void tearDown() {
-        ConnectionManager.cleanDb();
+        DBHelper.cleanDb();
         SelenideLogger.removeListener("AllureSelenide");
     }
 

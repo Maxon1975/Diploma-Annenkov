@@ -8,7 +8,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.netology.data.ConnectionManager;
+import ru.netology.data.DBHelper;
 import ru.netology.pages.CreditPayPage;
 import ru.netology.pages.LeadingPage;
 
@@ -32,7 +32,7 @@ public class CreditFieldsTest {
 
     @AfterAll
     static void tearDown() {
-        ConnectionManager.cleanDb();
+        DBHelper.cleanDb();
         SelenideLogger.removeListener("AllureSelenide");
     }
 
